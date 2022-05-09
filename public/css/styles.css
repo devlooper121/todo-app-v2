@@ -161,8 +161,38 @@ footer {
   'opsz' 48
 }
 
-@media only screen and (max-width: 600px){
+@media  (max-width: 600px){
   .box{
     min-width: 300px;
+  }
+  input[type="text"]{
+    min-width: 213px;
+  }
+}
+@media  (max-width: 420px){
+  .menu{
+    right: 5px;
+  }
+  .menu-btn{
+    right: 5px;
+  }
+  .box{
+    min-width: 300px;
+  }
+  input[type="text"]{
+    height: 40px;
+    min-width: 200px;
+    font-size: 15px;
+  }
+  form.iten{
+    position: relative;
+  }
+  .add {
+    min-height: 40px;
+    width: 40px;
+    padding-bottom: 3px;
+    font-size: 20px;
+    position: absolute;
+    right: 5px;
   }
 }
