@@ -1,5 +1,5 @@
 //jshint esversion:6
-
+const pass = "4TVioZ72UJk6gr20";
 const express = require("express");
 const bodyParser = require("body-parser");
 const date = require(__dirname + "/date.js");
@@ -8,7 +8,7 @@ const _ = require("lodash");
 const res = require("express/lib/response");
 
 // connect to database(Local);
-mongoose.connect("mongodb://localhost:27017/todolistDB");
+mongoose.connect("mongodb+srv://admin-Dheeraj:4TVioZ72UJk6gr20@cluster0.bhqa0.mongodb.net/todolistDB");
 
 // make new itemsSchema
 const itemsSchema = new mongoose.Schema({
@@ -190,6 +190,6 @@ app.get("/about", function(req, res){
   res.render("about");
 });
 
-app.listen(3000, function() {
+app.listen(process.env.PORT ||3000, function() {
   console.log("Server started on port 3000");
 });
